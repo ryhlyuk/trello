@@ -1,0 +1,25 @@
+{
+  "name": "trello",
+  "version": "1.0.0",
+  "description": "Trello on Vanilla JS",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryhlyuk/trello.git"
+  },
+  "keywords": [
+    "trello",
+    "vanilla",
+    "javascript",
+    "ES5"
+  ],
+  "author": "Volodymyr Rykhliuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryhlyuk/trello/issues"
+  },
+  "homepage": "https://github.com/ryhlyuk/trello#readme"
+}
