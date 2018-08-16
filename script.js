@@ -45,6 +45,7 @@
         var avatar = document.createElement('img');
         avatar.setAttribute('src', "https://pbs.twimg.com/profile_images/609783819/Dethklok_Avatar_by_argantes_400x400.jpg");
         avatar.style.width = '50px';
+        avatar.className = "avatar-mini";
         avatar.style.height = '50px';
         additionalOptionsDiv.appendChild(avatar);
         defaultCard.appendChild(additionalOptionsDiv);

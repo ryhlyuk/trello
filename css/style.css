@@ -31,11 +31,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-.priority-very-low {
-    width: 20px;
-    height: 20px;
+.priority-very-low, .priority-low, .priority-medium, .priority-high, .priority-urgent {
+    width: 5px;
+    height: 5px;
     border-radius: 30px;
-    border: 1px solid black;
 }
 .priority-very-low {
     background: green;
@@ -52,10 +51,37 @@ body {
 .priority-urgent {
     background: red;
 }
-
+.avatar-mini {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+}
 .additional-options {
     display: flex;
     color: lightgray;
     justify-content: space-between;
 }
 
+progress {
+    width: 100%;
+    height: 13px;
+    display: block;
+    /* Important Thing */
+    -webkit-appearance: none;
+    border: none;
+}
+/* All good till now. Now we'll style the background */
+progress::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    padding: 2px;
+    box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Now the value part */
+progress::-webkit-progress-value {
+    border-radius: 50px;
+    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+    background: yellow;
+}
