@@ -1,13 +1,18 @@
+$card_width_padding: 20px;
+$card_margin: 10px;
+$card_width: calc(100% - $card_width_padding - $card_margin);
+
 body {
     background: aqua;
+    font-family: 'Roboto Medium', sans-serif;
 }
-
 .content {
     display: flex;
 }
 
 .group {
     display: flex;
+    width: 25%;
     flex-direction: column;
     margin: 10px;
     background: #e9e9eb;
@@ -16,17 +21,32 @@ body {
     };
     .footer {
         opacity: 0.5;
+        cursor: pointer;
+    }
+    @media (max-width: 980px) {
+        width: 245px;
     }
     .card {
-        margin: 10px;
-        width: 300px;
-        height: 100px;
+        * {
+            margin: 5px 0;
+        }
+        margin: $card_margin;
+        padding: 5px $card_width_padding;
+        width: $card_width;
         background: white;
     
         display: flex;
         flex-direction: column;
         
         justify-content: space-between;
+        .remove-card {
+            cursor: pointer;
+            font-size: 10px;
+        }
+        :first-child {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
 
@@ -53,7 +73,6 @@ body {
 .avatar-mini {
     width: 30px;
     height: 30px;
-    margin: 5px;
     border-radius: 5px;
 }
 .additional-options {
@@ -63,9 +82,8 @@ body {
 }
 
 progress {
-    width: 100%;
+    width: 75%;
     height: 13px;
-    display: block;
     /* Important Thing */
     -webkit-appearance: none;
     border: none;
