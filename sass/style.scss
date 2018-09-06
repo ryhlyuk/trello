@@ -79,6 +79,12 @@ body {
     display: flex;
     color: lightgray;
     justify-content: space-between;
+    .date-time-group {
+        display: flex;
+        span {
+            margin: auto;
+        }
+    }
 }
 
 progress {
