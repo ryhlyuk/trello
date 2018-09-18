@@ -35,7 +35,6 @@ var applicationFunctions = {};
 			group.childrens.forEach(function(card) {
 				applicationFunctions.addCard(group.id, card);
 			});
-			console.log(group);
 		});
 	}
 
@@ -101,7 +100,7 @@ var applicationFunctions = {};
 					'</div>' + 
 					'<div>' + title + '</div>' + 
 					'<div class="additional-options">' +
-						'<icon class="material-icons">more_horiz</icon>' + 
+						'<icon class="material-icons" onclick="applicationFunctions.openModal(' + '\''+ title + '\'' + ','  + '\''+ progressValue  + '\'' + ',' + '\'' + date + '\'' + ',' + '\'' + avatar + '\'' + ')">more_horiz</icon>' + 
 						'<div class="date-time-group">' + 
 							'<icon class="material-icons">access_time</icon> ' + 
 							'<span>' + date + '</span>' +
@@ -114,6 +113,19 @@ var applicationFunctions = {};
 		var removeIcon = defaultCard.children[0].children[1];
 		removeIcon.addEventListener('click', removeCard.bind(this, group));
 		group.insertBefore(defaultCard, lastChild);
+	};
+
+	applicationFunctions.openModal = function(title, progress, date, avatar) {
+		var options = {
+			template: 
+				'<div>' +
+					'<input type="text" label="title" value="' + title + '">' +
+					'<input type="date" label="date" value="' + date + '">' +
+					'<input type="range" min="1" max="100" step="1" value="' + progress + '"> ' +
+				'</div>'
+		};
+		var modal = new ModalService(options);
+		modal.open();
 	};
 
 	init();
